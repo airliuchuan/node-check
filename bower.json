@@ -1,0 +1,22 @@
+{
+  "name": "count",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "kay"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "wangnan/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
