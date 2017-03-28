@@ -50,6 +50,7 @@ app.post('/getuserlist', urlencodedParser, function(req, res) {
 		time: req.body.over / 1000
 	}
 	
+	console.log(userdata.screens)
 	var user = new User(userdata)
 	
 	User.find({sessionid:userdata.sessionid}, function(err, docs) {
@@ -61,11 +62,7 @@ app.post('/getuserlist', urlencodedParser, function(req, res) {
 	   
 		    User.update({sessionid:userdata.sessionid},{$set: {right: userdata.right,middle: userdata.middle, bottom: userdata.bottom, screens: userdata.screens,begin: userdata.begin, time: userdata.time}},function(err){
 		     console.log('update status:', err ? err : 'success');
-		     if(err) {
-		     	user.save(function(err) {    // 执行保存，并查看返回情况
-		       		console.log('save status:', err ? err : 'success');
-		  		});
-		     }
+		     
 		    });
 	   } else {
 		    user.save(function(err) {    // 执行保存，并查看返回情况

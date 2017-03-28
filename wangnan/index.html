@@ -240,6 +240,8 @@ var _hmt = _hmt || [];
         
         //console.log(Math.ceil(arr.sort(function(a,b){return b-a})[0] / $(window).height()))//计算浏览屏数
         if(tmp > sTop && (tmp - sTop) > wh){
+
+            console.log('if')
             tmp = sTop;
             curr = Math.ceil(sTop/wh)
             // console.log(curr)
@@ -255,6 +257,7 @@ var _hmt = _hmt || [];
                 }
             })
         }else if(tmp < sTop && (sTop - tmp) > wh){
+            console.log('else')
             tmp = sTop;
             curr = Math.ceil(sTop/wh)
             console.log(curr)
